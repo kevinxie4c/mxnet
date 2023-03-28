@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.0.2)
 
+add_compile_definitions(THRUST_IGNORE_CUB_VERSION_CHECK)
+
 # workaround to store CMAKE_CROSSCOMPILING because is getting reset by the project command
 if(CMAKE_CROSSCOMPILING)
   set(__CMAKE_CROSSCOMPILING ${CMAKE_CROSSCOMPILING})
