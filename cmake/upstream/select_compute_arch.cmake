@@ -60,7 +60,7 @@ endif()
 set(CUDA_KNOWN_GPU_ARCHITECTURES  "Fermi" "Kepler" "Maxwell")
 
 # This list will be used for CUDA_ARCH_NAME = Common option (enabled by default)
-set(CUDA_COMMON_GPU_ARCHITECTURES "3.0" "5.0")
+#set(CUDA_COMMON_GPU_ARCHITECTURES "3.0" "5.0")
 
 if(CUDA_VERSION VERSION_LESS "7.0")
   set(CUDA_LIMIT_GPU_ARCHITECTURE "5.2")
