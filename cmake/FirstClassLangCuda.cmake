@@ -106,7 +106,8 @@ endfunction()
 set(CUDA_KNOWN_GPU_ARCHITECTURES "Kepler" "Maxwell")
 
 # This list will be used for CUDA_ARCH_NAME = Common option (enabled by default)
-set(CUDA_COMMON_GPU_ARCHITECTURES "3.0" "3.5" "5.0")
+#set(CUDA_COMMON_GPU_ARCHITECTURES "3.0" "3.5" "5.0")
+set(CUDA_COMMON_GPU_ARCHITECTURES "")
 
 if (CUDA_TOOLSET VERSION_GREATER "6.5")
   list(APPEND CUDA_KNOWN_GPU_ARCHITECTURES "Kepler+Tegra" "Kepler+Tesla" "Maxwell+Tegra")
@@ -129,6 +130,7 @@ if (CUDA_TOOLSET VERSION_GREATER "10.0")
   list(APPEND CUDA_KNOWN_GPU_ARCHITECTURES "Turing")
   list(APPEND CUDA_COMMON_GPU_ARCHITECTURES "7.5")
 endif()
+
 
 ################################################################################################
 # Function for selecting GPU arch flags for nvcc based on CUDA_ARCH_NAME

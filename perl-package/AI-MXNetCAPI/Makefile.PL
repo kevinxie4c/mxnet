@@ -46,7 +46,7 @@ WriteMakefile(
     AUTHOR          => 'Sergey Kolychev <sergeykolychev.github@gmail.com>',
     VERSION_FROM    => 'lib/AI/MXNetCAPI.pm',
     ABSTRACT_FROM   => 'lib/AI/MXNetCAPI.pm',
-    LIBS           => ['-L../../lib -lmxnet'],
+    LIBS           => ['-L../../build -Wl,-rpath=/home/kevinxie/dependency/mxnet/build/ -lmxnet'],
     INC            => '-I../../include/mxnet',
     OBJECT         => 'mxnet_wrap.o',
     LDDLFLAGS      => join(' ', @lddlflags),

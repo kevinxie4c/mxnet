@@ -46,7 +46,7 @@ WriteMakefile(
     AUTHOR          => 'Sergey Kolychev <sergeykolychev.github@gmail.com>',
     VERSION_FROM    => 'lib/AI/NNVMCAPI.pm',
     ABSTRACT_FROM   => 'lib/AI/NNVMCAPI.pm',
-    LIBS           => ['-L../../lib -lmxnet'],
+    LIBS           => ['-L../../build -Wl,-rpath=/home/kevinxie/dependency/mxnet/build -lmxnet'],
     INC            => '-I../../3rdparty/tvm/nnvm/include/nnvm',
     OBJECT         => 'nnvm_wrap.o',
     LDDLFLAGS      => join(' ', @lddlflags),
