@@ -40,14 +40,15 @@ while(my $flag = shift(@tmp))
    }
 }
 
+my $rel_path = '../../ubuntu-22.04-cpu';
 WriteMakefile(
     NAME            => 'AI::NNVMCAPI',
     LICENSE         => 'apache_2_0',
     AUTHOR          => 'Sergey Kolychev <sergeykolychev.github@gmail.com>',
     VERSION_FROM    => 'lib/AI/NNVMCAPI.pm',
     ABSTRACT_FROM   => 'lib/AI/NNVMCAPI.pm',
-    LIBS           => ['-L../../lib -lmxnet'],
-    INC            => '-I../../3rdparty/tvm/nnvm/include/nnvm',
+    LIBS           => ["-L$rel_path/lib -lmxnet"],
+    INC            => "-I$rel_path/include/nnvm",
     OBJECT         => 'nnvm_wrap.o',
     LDDLFLAGS      => join(' ', @lddlflags),
     PREREQ_PM      => {
