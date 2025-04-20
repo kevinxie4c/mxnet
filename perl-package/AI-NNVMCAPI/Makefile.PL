@@ -40,7 +40,7 @@ while(my $flag = shift(@tmp))
    }
 }
 
-my $rel_path = '../../ubuntu-22.04-cpu';
+my $rel_path = '../../ubuntu-22.04-gpu';
 WriteMakefile(
     NAME            => 'AI::NNVMCAPI',
     LICENSE         => 'apache_2_0',
